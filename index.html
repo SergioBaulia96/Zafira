@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.jpg" type="image/x-icon">
+    <title>ZAFIRA - Velas Artesanales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <img src="img/logo.jpg" alt="Logo ZAFIRA" class="logo">
+                <span>ZAFIRA</span>
+            </div>
+            <button class="navbar-toggle" id="navbarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#sobre-nosotras" class="nav-link">Sobre Nosotras</a></li>
+                <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <main id="mainContent">
+        <!-- Inicio -->
+        <section id="inicio" class="active">
+            <!-- Carrusel -->
+            <div class="hero">
+                <div class="carousel" id="mainCarousel">
+                    <div class="carousel-item active">
+                        <img src="img/velas-carrousel.jpg" alt="Velas Artesanales">
+                        <div class="carousel-overlay">
+                            <div class="carousel-content">
+                                <h2>Velas Artesanales</h2>
+                                <p>Hechas a mano con cera de soja y esencias naturales</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/dif-carousel-2.jpeg" alt="Difusores Aromáticos">
+                        <div class="carousel-overlay">
+                            <div class="carousel-content">
+                                <h2>Difusores Aromáticos</h2>
+                                <p>Ambientes relajantes con diseño rústico-elegante</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/1920x800/5C4033/F5F5DC?text=Kits+de+Regalo" alt="Kits de Regalo">
+                        <div class="carousel-overlay">
+                            <div class="carousel-content">
+                                <h2>Kits de Regalo</h2>
+                                <p>Perfectos para sorprender con bienestar y elegancia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
+                    <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
+                </div>
+                <div class="carousel-indicators" id="indicators"></div>
+            </div>
+
+            <!-- Servicios -->
+            <div class="services-section">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fa-solid fa-hand-holding-heart fa-3x" style="color: #8B5A2B;"></i>
+                        <h4>Elaboración Artesanal</h4>
+                        <p>Cada vela es hecha a mano con cera de soja, mechas de algodón y esencias 100% naturales.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-spa fa-3x" style="color: #8B5A2B;"></i>
+                        <h4>Aromaterapia Personalizada</h4>
+                        <p>Creaciones únicas según tu estado de ánimo: relajación, energía o concentración.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-gift fa-3x" style="color: #8B5A2B;"></i>
+                        <h4>Kits de Regalo</h4>
+                        <p>Presentaciones elegantes para regalar en cumpleaños, bodas o eventos especiales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Nosotras -->
+        <section id="sobre-nosotras">
+            <div class="container">
+                <h2 class="section-title">Nuestra Historia</h2>
+                <div class="about-content">
+                    <div class="about-img-container">
+                        <img src="img/agus-ara.jpg" alt="Fundadoras ZAFIRA" class="about-img">
+                    </div>
+                    <div class="about-text">
+                        <p>Somos <strong>Agustina y Araceli</strong>, amigas de toda la vida que unimos nuestras pasiones: el diseño y la aromaterapia, para crear <strong>ZAFIRA</strong>.</p>
+                        <p>Todo comenzó en 2020, durante la pandemia. Agustina, apasionada por los aromas naturales, empezó a experimentar con velas artesanales en su cocina. Araceli, diseñadora gráfica, se encargó del empaque y la identidad visual.</p>
+                        <p>Lo que empezó como un hobby se convirtió en un emprendimiento real. Hoy, cada producto que creamos lleva una parte de nosotras: el cuidado, la paciencia y el amor por lo hecho a mano.</p>
+                        <p>En ZAFIRA creemos que los pequeños detalles transforman el hogar. Una vela encendida, un aroma suave… son gestos que generan bienestar. Y eso es exactamente lo que queremos compartir contigo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catálogo -->
+        <section id="catalogo">
+            <div class="container">
+                <h2 class="section-title">Nuestro Catálogo</h2>
+                <!-- Filtros -->
+                <div class="filter-buttons" id="filterButtons">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="velas">Velas de Soja</button>
+                    <button class="filter-btn" data-filter="difusores">Difusores</button>
+                    <button class="filter-btn" data-filter="perlas">Perlas</button>
+                    <button class="filter-btn" data-filter="kits">Kits de Regalo</button>
+                </div>
+                <!-- Grid de Productos -->
+                <div class="product-grid" id="productGrid">
+                    <!-- Productos cargados dinámicamente -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrito -->
+        <section id="carrito">
+            <div class="container">
+                <h2 class="section-title">Tu Carrito</h2>
+                <div id="cartMessage" class="cart-empty">Tu carrito está vacío.</div>
+                <div class="cart-container" id="cartContainer">
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th>Subtotal</th>
+                                <th>Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartItems"></tbody>
+                    </table>
+                    <div class="cart-footer">
+                        <div class="cart-total">Total: <strong id="cartTotal">$0</strong></div>
+                        <button class="btn-whatsapp" id="checkoutWhatsApp">
+                            <i class="fab fa-whatsapp"></i> Finalizar Compra por WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto">
+            <div class="container">
+                <h2 class="section-title">Encuéntranos</h2>
+                <div class="contact-wrapper">
+                    <!-- Mapa a la izquierda -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d509.04421145301507!2d-62.03595860303867!3d-30.87469640382328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1757197223679!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+                            width="100%" 
+                            height="400" 
+                            style="border:0; border-radius: 16px;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+
+                    <!-- Información a la derecha -->
+                    <div class="contact-info-grid">
+                        <!-- Dirección 1 -->
+                        <div class="contact-card">
+                            <h4>📍 Punto de Retiro - Bertossi</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Pitt Funes 260, Brinkmann</p>
+                            <p><i class="fas fa-user"></i> <strong>Agustina</strong></p>
+                            <p><i class="fas fa-phone"></i> <a href="https://wa.me/5493562542281" target="_blank">+54 9 3562 542281</a></p>
+                        </div>
+
+                        <!-- Dirección 2 -->
+                        <div class="contact-card">
+                            <h4>📍 Punto de Retiro - Córdoba</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Calle Santiago del Estero 567, Córdoba</p>
+                            <p><i class="fas fa-user"></i> <strong>Araceli</strong></p>
+                            <p><i class="fas fa-phone"></i> <a href="https://wa.me/5493562513803" target="_blank">+54 9 3562 513803</a></p>
+                        </div>
+
+                        <!-- Instagram -->
+                        <div class="contact-card social">
+                            <h4>📷 Síguenos en Instagram</h4>
+                            <a href="https://www.instagram.com/zafira_aromasconalma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-link">
+                                <i class="fab fa-instagram"></i> @zafira_aromasconalma
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Carrito Flotante -->
+    <div class="cart-float" id="cartFloat">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">Producto añadido al carrito</div>
+
+    <!-- Modal de Formulario de Pedido -->
+    <div class="checkout-modal" id="checkoutModal" style="display: none;">
+        <div class="checkout-modal-content">
+            <span class="checkout-modal-close" id="closeCheckoutModal">&times;</span>
+            <h3>Finaliza tu pedido</h3>
+            <p>Por favor, ingresa tu nombre para personalizar tu mensaje 💬</p>
+            <input type="text" id="clientNameInput" placeholder="Tu nombre..." maxlength="50">
+            <div class="checkout-modal-actions">
+                <button id="cancelCheckout">Cancelar</button>
+                <button id="sendCheckout">Enviar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Confirmación -->
+    <div class="confirm-modal" id="confirmModal" style="display: none;">
+        <div class="confirm-content">
+            <div class="confirm-header">
+                <h3>¿Eliminar producto?</h3>
+                <span class="confirm-close" id="closeConfirmModal">&times;</span>
+            </div>
+            <p>¿Estás seguro de que quieres eliminar este producto del carrito?</p>
+            <div class="confirm-actions">
+                <button id="cancelDelete" class="btn-cancel">Cancelar</button>
+                <button id="confirmDelete" class="btn-delete">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Detalle de Producto -->
+    <div class="product-modal" id="productModal" style="display: none;">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-body">
+                <img src="" alt="Imagen del producto" class="modal-product-img" id="modalProductImg">
+                <h2 id="modalProductName">Nombre del producto</h2>
+                <p id="modalProductDesc">Descripción detallada del producto.</p>
+                <p class="modal-price" id="modalProductPrice">$0</p>
+                <button class="btn-add-cart" id="modalAddToCart">
+                    <i class="fas fa-cart-plus"></i> Añadir al carrito
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.jpg" alt="Logo ZAFIRA" class="logo">
+                    <h4 style="color: beige;">ZAFIRA</h4>
+                </div>
+                <p>&copy; 2025 ZAFIRA. Todos los derechos reservados.</p>
+                <p>Hecho con <i class="fas fa-heart heart-icon"></i> para amantes del bienestar</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
