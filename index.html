@@ -103,10 +103,9 @@
                         <img src="img/agus-ara.jpg" alt="Fundadoras ZAFIRA" class="about-img">
                     </div>
                     <div class="about-text">
-                        <p>Somos <strong>Agustina y Araceli</strong>, amigas de toda la vida que unimos nuestras pasiones: el diseño y la aromaterapia, para crear <strong>ZAFIRA</strong>.</p>
-                        <p>Todo comenzó en 2020, durante la pandemia. Agustina, apasionada por los aromas naturales, empezó a experimentar con velas artesanales en su cocina. Araceli, diseñadora gráfica, se encargó del empaque y la identidad visual.</p>
-                        <p>Lo que empezó como un hobby se convirtió en un emprendimiento real. Hoy, cada producto que creamos lleva una parte de nosotras: el cuidado, la paciencia y el amor por lo hecho a mano.</p>
-                        <p>En ZAFIRA creemos que los pequeños detalles transforman el hogar. Una vela encendida, un aroma suave… son gestos que generan bienestar. Y eso es exactamente lo que queremos compartir contigo.</p>
+                        <p>Somos <strong>Agustina y Araceli</strong>, dos amigas unidas por la pasión de crear espacios mas cálidos, armónicos y llenos de energía, juntas creamos <strong>ZAFIRA</strong>.</p>
+                        <p>Lo que empezó como un hobby se convirtió en un emprendimiento real. Hoy, cada producto que ofrecemos lleva una parte de nosotras: el cuidado, la paciencia y el amor por lo hecho a mano.</p>
+                        <p>En ZAFIRA creemos que los pequeños detalles transforman el hogar. Una vela encendida, un aroma suave… son gestos que generan bienestar. Y eso es exactamente lo que queremos compartir con ustedes.</p>
                     </div>
                 </div>
             </div>
@@ -120,6 +119,7 @@
                 <div class="filter-buttons" id="filterButtons">
                     <button class="filter-btn active" data-filter="all">Todos</button>
                     <button class="filter-btn" data-filter="velas">Velas de Soja</button>
+                    <button class="filter-btn" data-filter="decoradas">Velas Decoradas</button>
                     <button class="filter-btn" data-filter="difusores">Difusores</button>
                     <button class="filter-btn" data-filter="perlas">Perlas</button>
                     <button class="filter-btn" data-filter="kits">Kits de Regalo</button>
@@ -250,7 +250,11 @@
         <div class="modal-content">
             <span class="modal-close" id="modalClose">&times;</span>
             <div class="modal-body">
-                <img src="" alt="Imagen del producto" class="modal-product-img" id="modalProductImg">
+                <!-- Galería de imágenes -->
+<div class="modal-images">
+    <img src="" alt="Imagen del producto" class="modal-product-img main-img" id="modalProductImg1">
+    <img src="" alt="Segunda imagen del producto" class="modal-product-img" id="modalProductImg2">
+</div>
                 <h2 id="modalProductName">Nombre del producto</h2>
                 <p id="modalProductDesc">Descripción detallada del producto.</p>
                 <p class="modal-price" id="modalProductPrice">$0</p>

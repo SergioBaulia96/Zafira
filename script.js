@@ -4,13 +4,25 @@ let cart = [];
 
 // Productos (con descripción incluida)
 const products = [
-    { id: 1, name: "Vela Aromática - Lavanda", price: 1200, img: "img/velas-carrousel.jpg", category: "velas", desc: "Vela de lavanda 100% natural, ideal para relajación y buen descanso." },
-    { id: 2, name: "Vela Aromática - Vainilla", price: 1150, img: "https://placehold.co/600x400/D2B48C/5C4033?text=Vainilla", category: "velas", desc: "Vela de vainilla con esencia orgánica, perfecta para ambientes cálidos." },
-    { id: 3, name: "Vela Aromática - Limón", price: 1180, img: "https://placehold.co/600x400/5C4033/F5F5DC?text=Limón", category: "velas", desc: "Revitaliza tu ambiente con este aroma cítrico natural." },
-    { id: 4, name: "Difusor Aromático - Rosa", price: 1800, img: "img/difusor.jpg", category: "difusores", desc: "Difusor con esencia de rosa y varillas de mimbre duraderas." },
-    { id: 5, name: "Difusor Aromático - Sándalo", price: 1850, img: "https://placehold.co/600x400/8B5A2B/D2B48C?text=Sándalo", category: "difusores", desc: "Ideal para meditación y concentración. Aroma profundo y cálido." },
-    { id: 6, name: "Kit Regalo Premium", price: 3500, img: "https://placehold.co/600x400/D2B48C/5C4033?text=Kit+Premium", category: "kits", desc: "Incluye vela, difusor y sales de baño. Perfecto para regalar." },
-    { id: 7, name: "Kit Pareja - Relajación", price: 2800, img: "https://placehold.co/600x400/F5F5DC/5C4033?text=Kit+Pareja", category: "kits", desc: "Dos velas y un difusor para compartir momentos de bienestar." }
+    { id: 1, name: "Armonía", price: 17800, img: "img/ARMONIA.jpg",img2: "img/volcan-deco.jpg", category: "velas", desc: "Caramelera de vidrio 10cm de alto." },
+    { id: 2, name: "Luxury", price: 21900, img: "img/LUXURY.jpg", category: "velas", desc: "Cuenco de vidrio, tiple pabilo, 13cm de diametro." },
+    { id: 3, name: "Equilibrio", price: 20000, img: "img/equilibrio1.jpg", category: "velas", desc: "Cuenco de vidrio, tiple pabilo, 12cm de alto." },
+    { id: 4, name: "Equilibrio - chico", price: 12500, img: "img/equilibrio-chico.jpg", category: "velas", desc: "Cuenco de vidrio chico, 9cm de alto." },
+    { id: 5, name: "Volcán Deco", price: 15500, img: "img/volcan-deco.jpg", category: "velas", desc: "Cuenco de vidrio, 8cm de alto." },
+    { id: 6, name: "Sublime Deco", price: 16500, img: "img/sublime-deco.jpg", category: "velas", desc: "Recipiente de vidrio, 9cm de alto." },
+    { id: 7, name: "Clásica Deco", price: 15500, img: "img/clasica-deco.jpg", category: "velas", desc: "Recipiente de vidrio, 9cm de alto." },
+    { id: 8, name: "Conexión", price: 13000, img: "img/conexion.jpg", category: "velas", desc: "Cuenco de vidrio, 8cm de alto." },
+    { id: 9, name: "Petit Deco", price: 13500, img: "img/petit-deco.jpg", category: "velas", desc: "Recipiente de vidrio, 9cm de alto." },
+    { id: 10, name: "Aluminio", price: 17800, img: "img/aluminio.jpg", category: "velas", desc: "Rosa brillosa - Plata, 10cm de alto." },
+    { id: 11, name: "Cera de Soja", price: 5700, img: "img/cera70.jpg", category: "velas", desc: "Lata 70grs." },
+    { id: 12, name: "Cera de Soja", price: 8500, img: "img/cera130.jpg", category: "velas", desc: "Lata 130   grs." },
+    { id: 13, name: "Serenidad", price: 16500, img: "img/serenidad.jpg", category: "velas", desc: "Cuenco de vidrio con tapa, 10cm de alto." },
+    { id: 14, name: "Vitalidad", price: 15000, img: "img/vitalidad.jpg", category: "velas", desc: "Cuenco de vidrio con tapa, 8.5cm de alto." },
+    { id: 15, name: "Cera de Soja", price: 18500, img: "img/cera400.jpg", category: "velas", desc: "Lata 400grs." },
+    { id: 16, name: "Cera de Soja", price: 22500, img: "img/cera500.jpg", category: "velas", desc: "Lata 500grs." },
+    { id: 17, name: "Cera de Soja", price: 27500, img: "img/cera600.jpg", category: "velas", desc: "Lata 600grs." },
+    { id: 18, name: "Cera de Soja", price: 32500, img: "img/cera700.jpg", category: "velas", desc: "Lata 700grs." },
+    { id: 19, name: "Cera de Soja", price: 37500, img: "img/cera800.jpg", category: "velas", desc: "Lata 800grs." },
 ];
 
 // === NAVEGACIÓN Y MENÚ MÓVIL ===
@@ -444,9 +456,11 @@ function setupModal() {
         }
 
         // Actualizar contenido del modal
-        document.getElementById('modalProductImg').src = product.img;
-        document.getElementById('modalProductImg').alt = product.name;
-        document.getElementById('modalProductName').textContent = product.name;
+        // Cargar ambas imágenes
+document.getElementById('modalProductImg1').src = product.img;
+document.getElementById('modalProductImg1').alt = product.name;
+document.getElementById('modalProductImg2').src = product.img2 || product.img; // Fallback si no hay img2
+document.getElementById('modalProductImg2').alt = "Imagen adicional de " + product.name;
         document.getElementById('modalProductDesc').textContent = product.desc;
         document.getElementById('modalProductPrice').textContent = `$${product.price}`;
 
