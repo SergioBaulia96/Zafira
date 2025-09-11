@@ -4,25 +4,43 @@ let cart = [];
 
 // Productos (con descripción incluida)
 const products = [
-    { id: 1, name: "Armonía", price: 17800, img: "img/ARMONIA.jpg",img2: "img/volcan-deco.jpg", category: "velas", desc: "Caramelera de vidrio 10cm de alto." },
+    { id: 1, name: "Armonía", price: 17800, img: "img/ARMONIA.jpg", category: "velas", desc: "Caramelera de vidrio 10cm de alto." },
     { id: 2, name: "Luxury", price: 21900, img: "img/LUXURY.jpg", category: "velas", desc: "Cuenco de vidrio, tiple pabilo, 13cm de diametro." },
     { id: 3, name: "Equilibrio", price: 20000, img: "img/equilibrio1.jpg", category: "velas", desc: "Cuenco de vidrio, tiple pabilo, 12cm de alto." },
     { id: 4, name: "Equilibrio - chico", price: 12500, img: "img/equilibrio-chico.jpg", category: "velas", desc: "Cuenco de vidrio chico, 9cm de alto." },
-    { id: 5, name: "Volcán Deco", price: 15500, img: "img/volcan-deco.jpg", category: "velas", desc: "Cuenco de vidrio, 8cm de alto." },
-    { id: 6, name: "Sublime Deco", price: 16500, img: "img/sublime-deco.jpg", category: "velas", desc: "Recipiente de vidrio, 9cm de alto." },
-    { id: 7, name: "Clásica Deco", price: 15500, img: "img/clasica-deco.jpg", category: "velas", desc: "Recipiente de vidrio, 9cm de alto." },
-    { id: 8, name: "Conexión", price: 13000, img: "img/conexion.jpg", category: "velas", desc: "Cuenco de vidrio, 8cm de alto." },
-    { id: 9, name: "Petit Deco", price: 13500, img: "img/petit-deco.jpg", category: "velas", desc: "Recipiente de vidrio, 9cm de alto." },
-    { id: 10, name: "Aluminio", price: 17800, img: "img/aluminio.jpg", category: "velas", desc: "Rosa brillosa - Plata, 10cm de alto." },
-    { id: 11, name: "Cera de Soja", price: 5700, img: "img/cera70.jpg", category: "velas", desc: "Lata 70grs." },
-    { id: 12, name: "Cera de Soja", price: 8500, img: "img/cera130.jpg", category: "velas", desc: "Lata 130   grs." },
-    { id: 13, name: "Serenidad", price: 16500, img: "img/serenidad.jpg", category: "velas", desc: "Cuenco de vidrio con tapa, 10cm de alto." },
-    { id: 14, name: "Vitalidad", price: 15000, img: "img/vitalidad.jpg", category: "velas", desc: "Cuenco de vidrio con tapa, 8.5cm de alto." },
-    { id: 15, name: "Cera de Soja", price: 18500, img: "img/cera400.jpg", category: "velas", desc: "Lata 400grs." },
-    { id: 16, name: "Cera de Soja", price: 22500, img: "img/cera500.jpg", category: "velas", desc: "Lata 500grs." },
-    { id: 17, name: "Cera de Soja", price: 27500, img: "img/cera600.jpg", category: "velas", desc: "Lata 600grs." },
-    { id: 18, name: "Cera de Soja", price: 32500, img: "img/cera700.jpg", category: "velas", desc: "Lata 700grs." },
-    { id: 19, name: "Cera de Soja", price: 37500, img: "img/cera800.jpg", category: "velas", desc: "Lata 800grs." },
+    { id: 5, name: "Volcán Deco", price: 15500, img: "img/volcan-deco.jpg",img2:"img/volcan-deco-dos.jpg", category: "velas", desc: "Cuenco de vidrio, 8cm de alto." },
+    { id: 6, name: "Sublime Deco", price: 16500, img: "img/sublime-deco.jpg",img2:"img/sublime-deco-dos.jpg", category: "velas", desc: "Recipiente de vidrio, 9cm de alto." },
+    { id: 7, name: "Sublime Deco", price: 16500, img: "img/sublime-deco-lavanda.jpg",img2:"img/sublime-deco-lavanda-dos.jpg", category: "velas", desc: "Recipiente de vidrio, 9cm de alto." },
+    { id: 8, name: "Clásica Deco", price: 15500, img: "img/clasica-deco.jpg",img2:"img/clasica-deco-dos.jpg", category: "velas", desc: "Recipiente de vidrio, 9cm de alto." },
+    { id: 9, name: "Conexión", price: 13000, img: "img/conexion.jpg", category: "velas", desc: "Cuenco de vidrio, 8cm de alto." },
+    { id: 10, name: "Petit Deco", price: 13500, img: "img/petit-deco.jpg",img2:"img/petit-deco-dos.jpg", category: "velas", desc: "Recipiente de vidrio, 9cm de alto." },
+    { id: 11, name: "Aluminio", price: 17800, img: "img/aluminio.jpg",img2:"img/aluminio-dos.jpg", category: "velas", desc: "Rosa brillosa - Plata, 10cm de alto." },
+    { id: 12, name: "Cera de Soja", price: 5700, img: "img/cera70.jpg", category: "velas", desc: "Lata 70grs." },
+    { id: 13, name: "Cera de Soja", price: 8500, img: "img/cera130.jpg", category: "velas", desc: "Lata 130   grs." },
+    { id: 14, name: "Serenidad", price: 16500, img: "img/serenidad.jpg",img2:"img/conTapas.jpg", category: "velas", desc: "Cuenco de vidrio con tapa, 10cm de alto." },
+    { id: 15, name: "Vitalidad", price: 15000, img: "img/vitalidad.jpg", img2:"img/conTapas.jpg", category: "velas", desc: "Cuenco de vidrio con tapa, 8.5cm de alto." },
+    { id: 16, name: "Tennesse - Flores Blancas", price: 17000, img: "img/florblanca.jpg",img2:"img/florblanca-dos.jpg", category: "decoradas", desc: "Cuenco de vidrio con tapa, 8.5cm de alto." },
+    { id: 17, name: "Tennesse - Café", price: 17000, img: "img/cafe.jpg",img2:"img/cafe-dos.jpg", category: "decoradas", desc: "Cuenco de vidrio con tapa, 8.5cm de alto." },
+    { id: 18, name: "Tennesse - Naranja", price: 17000, img: "img/naranja.jpg",img2:"img/naranja-dos.jpg", category: "decoradas", desc: "Cuenco de vidrio con tapa, 8.5cm de alto." },
+    { id: 19, name: "Tennesse - Limon", price: 17000, img: "img/limon.jpg",img2:"img/limon-dos.jpg", category: "decoradas", desc: "Cuenco de vidrio con tapa, 8.5cm de alto." },
+    { id: 20, name: "Tennesse - Frambuesa", price: 17000, img: "img/frambuesa.jpg",img2:"img/frambuesa-dos.jpg", category: "decoradas", desc: "Cuenco de vidrio con tapa, 8.5cm de alto." },
+    { id: 21, name: "Tennesse - Budín Vainillado", price: 17000, img: "img/budin.jpg",img2:"img/budin-dos.jpg", category: "decoradas", desc: "Cuenco de vidrio con tapa, 8.5cm de alto." },
+    { id: 22, name: "Tennesse - Chocolate", price: 17000, img: "img/chocolate.jpg",img2:"img/chocolate-dos.jpg", category: "decoradas", desc: "Cuenco de vidrio con tapa, 8.5cm de alto." },
+    { id: 23, name: "Tennesse - Crumble de Peras", price: 17000, img: "img/crumble.jpg",img2:"img/crumble-dos.jpg", category: "decoradas", desc: "Cuenco de vidrio con tapa, 8.5cm de alto." },
+    { id: 24, name: "Tennesse - Chico", price: 14500, img: "img/variedad.jpg",img2:"img/variedad-dos.jpg", category: "decoradas", desc: "Cuenco de vidrio con tapa, 8cm de alto. Frutos rojos, Chocolate, Peras, Frambuesa" },
+    { id: 25, name: "Home - Diffuser", price: 17000, img: "img/diffuser-pvc.jpg", category: "difusores", desc: "PVC, 250ml." },
+    { id: 26, name: "Home - Diffuser", price: 15000, img: "img/diffuser-vidrio-dos.jpg", category: "difusores", desc: "Envase por 250ml." },
+    { id: 27, name: "Home - Diffuser", price: 20000, img: "img/diffuser-vidrio.jpg", category: "difusores", desc: "VIDRIO, 250ml." },
+    { id: 28, name: "Home - Diffuser", price: 10000, img: "img/diffuser-lulu.jpg", category: "difusores", desc: "By Lulu, 125ml." },
+    { id: 29, name: "Difusores - Autos", price: 6000, img: "img/diffuser-auto.jpg", category: "difusores", desc: "Envase de vidrio." },
+    { id: 30, name: "Perfumina", price: 17500, img: "img/perfumina-grande.jpg", category: "spray", desc: "Envase por 500ml." },
+    { id: 31, name: "Perfumina", price: 10000, img: "img/perfumina-chico.jpg", category: "spray", desc: "Envase por 250ml." },
+    { id: 32, name: "Home Spray", price: 11000, img: "img/home-spray.jpg", category: "spray", desc: "Envase por 250ml." },    
+    { id: 33, name: "Aceite para Hornillo", price: 5000, img: "img/aceite-lulu.jpg", category: "otros", desc: "Aceite By Lulu,envase de vidrio" },
+    { id: 34, name: "Pills", price: 10000, img: "img/pills-tres.jpg", img2:"img/pills-dos.jpg", category: "otros", desc: "Box por 6 unidades" },
+    { id: 35, name: "Perlas Aromaticas", price: 7000, img: "img/perla-lata.jpg", category: "otros", desc: "Envase de Lata" },
+    { id: 36, name: "Perlas Aromaticas", price: 5000, img: "img/perla-bolsa.jpg", category: "otros", desc: "Envase en bolsa" },
+    { id: 37, name: "Apagavelas", price: 5000, img: "img/apagavela.jpg", category: "otros", desc: "Diferentes modelos, precio por unidad." },
 ];
 
 // === NAVEGACIÓN Y MENÚ MÓVIL ===
@@ -34,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartCount();
     setupEventListeners();
     setupNavbar();
-    setupModal ();// <-- Añadido: Configura el menú móvil y el logo
+    setupModal();// <-- Añadido: Configura el menú móvil y el logo
 });
 
 function navigateTo(id) {
@@ -443,37 +461,73 @@ function setupEventListeners() {
 }
 
 // === MODAL DE PRODUCTO ===
+// === MODAL DE PRODUCTO CON CARRUSEL DE IMÁGENES ===
 function setupModal() {
     const modal = document.getElementById('productModal');
     const modalClose = document.getElementById('modalClose');
+    const modalImg = document.getElementById('modalProductImg');
+    const modalPrevBtn = document.getElementById('modalPrevBtn');
+    const modalNextBtn = document.getElementById('modalNextBtn');
+    const currentImageIndex = document.getElementById('currentImageIndex');
+    const totalImages = document.getElementById('totalImages');
 
-    // Hacer que openProductDetail esté disponible globalmente
-    window.openProductDetail = function(id) {
+    let currentImgIndex = 0;
+    let productImages = [];
+
+    // --- Definimos openProductDetail ---
+    window.openProductDetail = function (id) {
         const product = products.find(p => p.id === id);
-        if (!product || !modal) {
-            console.error('Producto no encontrado o modal no existe');
-            return;
-        }
+        if (!product || !modal) return;
 
-        // Actualizar contenido del modal
-        // Cargar ambas imágenes
-document.getElementById('modalProductImg1').src = product.img;
-document.getElementById('modalProductImg1').alt = product.name;
-document.getElementById('modalProductImg2').src = product.img2 || product.img; // Fallback si no hay img2
-document.getElementById('modalProductImg2').alt = "Imagen adicional de " + product.name;
+        // Crear array de imágenes (mínimo 1, máximo 2)
+        productImages = [product.img];
+        if (product.img2) productImages.push(product.img2);
+
+        currentImgIndex = 0;
+        totalImages.textContent = productImages.length;
+
+        // Mostrar imagen actual
+        modalImg.src = productImages[currentImgIndex];
+
+        // Actualizar información del producto
+        document.getElementById('modalProductName').textContent = product.name;
         document.getElementById('modalProductDesc').textContent = product.desc;
         document.getElementById('modalProductPrice').textContent = `$${product.price}`;
 
-        // Botón de añadir
+        // Botón de añadir al carrito
         document.getElementById('modalAddToCart').onclick = () => {
             addToCart(id);
             modal.classList.remove('show');
         };
 
+        // Mostrar/ocultar flechas según cantidad de imágenes
+        if (productImages.length <= 1) {
+            modalPrevBtn.classList.add('disabled');
+            modalNextBtn.classList.add('disabled');
+        } else {
+            modalPrevBtn.classList.remove('disabled');
+            modalNextBtn.classList.remove('disabled');
+        }
+
         // Mostrar modal
         modal.style.display = 'flex';
         setTimeout(() => modal.classList.add('show'), 10);
     };
+
+    // Navegación entre imágenes
+    modalPrevBtn?.addEventListener('click', () => {
+        if (productImages.length <= 1) return;
+        currentImgIndex = (currentImgIndex - 1 + productImages.length) % productImages.length;
+        modalImg.src = productImages[currentImgIndex];
+        currentImageIndex.textContent = currentImgIndex + 1;
+    });
+
+    modalNextBtn?.addEventListener('click', () => {
+        if (productImages.length <= 1) return;
+        currentImgIndex = (currentImgIndex + 1) % productImages.length;
+        modalImg.src = productImages[currentImgIndex];
+        currentImageIndex.textContent = currentImgIndex + 1;
+    });
 
     // Cerrar con X
     modalClose?.addEventListener('click', () => {
@@ -550,7 +604,7 @@ if (navbar) {
         // Scroll hacia abajo → ocultar
         if (scrollTop > lastScrollTop) {
             navbar.classList.add('hidden');
-        } 
+        }
         // Scroll hacia arriba → mostrar
         else {
             navbar.classList.remove('hidden');
