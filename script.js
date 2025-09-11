@@ -402,10 +402,13 @@ document.getElementById('sendCheckout')?.addEventListener('click', () => {
     const clientName = clientNameInput.value.trim();
 
     if (!clientName) {
-        alert('Por favor, ingresa tu nombre para continuar.');
-        clientNameInput.focus();
-        return;
-    }
+    // Mostrar modal de error
+    const errorModal = document.getElementById('errorModal');
+    errorModal.style.display = 'flex';
+    setTimeout(() => errorModal.classList.add('show'), 10);
+    clientNameInput.focus();
+    return;
+}
 
     // ✅ Nombre en mayúsculas
     const clientNameUpper = clientName.toUpperCase();
@@ -613,6 +616,64 @@ if (navbar) {
         lastScrollTop = scrollTop;
     });
 }
+
+// Cerrar modal de error
+document.getElementById('closeErrorModal')?.addEventListener('click', () => {
+    const modal = document.getElementById('errorModal');
+    modal.classList.remove('show');
+    setTimeout(() => modal.style.display = 'none', 300);
+});
+
+document.getElementById('acceptError')?.addEventListener('click', () => {
+    const modal = document.getElementById('errorModal');
+    modal.classList.remove('show');
+    setTimeout(() => modal.style.display = 'none', 300);
+});
+
+// Cerrar al hacer clic fuera
+window.addEventListener('click', (e) => {
+    const modal = document.getElementById('errorModal');
+    if (e.target === modal) {
+        modal.classList.remove('show');
+        setTimeout(() => modal.style.display = 'none', 300);
+    }
+});
+
+// === BOTÓN PARA VACIAR EL CARRITO ===
+document.getElementById('clearCartBtn')?.addEventListener('click', () => {
+    if (cart.length === 0) {
+        // Si está vacío, muestra mensaje
+        const errorModal = document.getElementById('errorModal');
+        errorModal.style.display = 'flex';
+        setTimeout(() => errorModal.classList.add('show'), 10);
+        document.querySelector('#errorModal .error-content p').textContent = 
+            'Tu carrito ya está vacío.';
+        return;
+    }
+
+    // Mostrar modal de confirmación
+    const modal = document.getElementById('confirmModal');
+    modal.style.display = 'flex';
+    setTimeout(() => modal.classList.add('show'), 10);
+
+    // Guardar acción para confirmar
+    window.confirmClearCart = () => {
+        cart = [];
+        saveCart();
+        updateCartUI();
+        updateCartCount();
+        showToast('Carrito vaciado correctamente');
+
+        // Cerrar modal
+        modal.classList.remove('show');
+        setTimeout(() => modal.style.display = 'none', 300);
+    };
+
+    // Cambiar acción del botón "Eliminar" a "Vaciar"
+    document.getElementById('confirmDelete').onclick = () => {
+        window.confirmClearCart();
+    };
+});
 
 // Actualizar UI
 updateCartUI();

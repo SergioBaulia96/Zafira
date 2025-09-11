@@ -164,6 +164,9 @@
                         <button class="btn-whatsapp" id="checkoutWhatsApp">
                             <i class="fab fa-whatsapp"></i> Finalizar Compra por WhatsApp
                         </button>
+                        <button class="btn-clear-cart" id="clearCartBtn">
+                            <i class="fas fa-trash-alt"></i> Vaciar Carrito
+                        </button>
                     </div>
                 </div>
             </div>
@@ -279,6 +282,17 @@
                     <i class="fas fa-cart-plus"></i> Añadir al carrito
                 </button>
             </div>
+        </div>
+    </div>
+
+        <!-- Modal de Error -->
+    <div class="error-modal" id="errorModal" style="display: none;">
+        <div class="error-content">
+            <span class="error-close" id="closeErrorModal">&times;</span>
+            <i class="fas fa-exclamation-circle" style="color: #e74c3c; font-size: 2.5rem; margin-bottom: 10px;"></i>
+            <h3>¡Atención!</h3>
+            <p>Por favor, ingresa tu nombre para continuar con el pedido.</p>
+            <button id="acceptError">Aceptar</button>
         </div>
     </div>
 
