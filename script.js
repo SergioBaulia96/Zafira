@@ -41,6 +41,16 @@ const products = [
     { id: 35, name: "Perlas Aromaticas", price: 7000, img: "img/perla-lata.jpg", category: "otros", desc: "Envase de Lata" },
     { id: 36, name: "Perlas Aromaticas", price: 5000, img: "img/perla-bolsa.jpg", category: "otros", desc: "Envase en bolsa" },
     { id: 37, name: "Apagavelas", price: 5000, img: "img/apagavela.jpg", category: "otros", desc: "Diferentes modelos, precio por unidad." },
+    { id: 38, name: "Kit de Regalo 1", price: 15000, img: "img/kit-tulipan.jpg", category: "kits", desc: "Vela Tulipan + Rosa" },
+    { id: 39, name: "Kit de Regalo 2", price: 17000, img: "img/carrouselbox.jpg", category: "kits", desc: "Vela Margarita + Perlas" },
+    { id: 40, name: "Kit de Regalo 3", price: 20000, img: "img/kit-pills.jpg", category: "kits", desc: "Home Spray + Pills Hornillo" },
+    { id: 41, name: "Kit de Regalo 4", price: 23000, img: "img/kit-shampoo.jpg", category: "kits", desc: "Vela Caramelera + Shampoo + Acondicionador" },
+    { id: 42, name: "Kit de Regalo 5", price: 32000, img: "img/kit-difusor.jpg", category: "kits", desc: "Difusor + Vela Rosa" },
+    { id: 43, name: "Kit de Regalo 6", price: 27000, img: "img/kit-home.jpg", category: "kits", desc: "Home Spray + Difusor 250ml" },
+    { id: 44, name: "Kit de Regalo 7", price: 27000, img: "img/kit-deco.jpg", category: "kits", desc: "Vela Deco + Perlas + Vela lata chica" },
+    { id: 45, name: "Kit de Regalo 8", price: 15700, img: "img/kit-doble.jpg", category: "kits", desc: "Difusor 125ml + Vela lata chica" },
+    { id: 46, name: "Kit de Regalo 9", price: 28500, img: "img/kit-doble.jpg", category: "kits", desc: "Difusor + Vela lata grande" },
+
 ];
 
 // === NAVEGACIÓN Y MENÚ MÓVIL ===
